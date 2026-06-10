@@ -1,10 +1,5 @@
 # BCAMT Workshop: LaTeX + AI
 
-## Resources
-
-- [LaTeX Templates](link)
-- [Prompt Starter File](#prompts)
-
 ## Prompts
 
 ### 1. From scratch
@@ -22,3 +17,8 @@
 ### 4. Fix broken LaTeX
 
 > Here is a LaTeX snippet with errors. Identify the syntax or logic errors and output a corrected version. Explain the fixes briefly.
+
+##Editing a LaTeX File
+Paste either the entire LaTeX code, or just the portion you want to edit.
+
+"Update the following code with ___(Insert your requests)___"
