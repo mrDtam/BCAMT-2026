@@ -13,6 +13,6 @@ A collection of custom-made LaTeX workbooks, sample assessments, and review pack
 * **AI Integration:** Check out `Prompt Starters.md` for the exact AI workflows used to generate content for these templates.
 
 ---
-*Developed by Douglas Tam. These assets are shared for professional development and educational use. If you adapt these templates for your school, please preserve the original attribution headers.*
+*Developed by Douglas Tam. These assets are shared for professional development and educational use. If you find them useful, please maintain this notice and link back to the original repository when sharing or adapting.*
 
 [Douglas Tam - LinkedIn](https://www.linkedin.com/in/douglas-tam-791a1b240/)
