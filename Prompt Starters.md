@@ -8,7 +8,7 @@
 
 ### 2. From a PDF
 
-> Convert the PDF to LaTeX code, using the exam class and the questions and parts environment. Use tikz to reproduce any diagrams. Wrap answers in solution blocks and have a printanswers toggle.
+> Convert the PDF to LaTeX code, using the **exam class** and the **questions and parts environment**. Use **tikz** to reproduce any diagrams. **Wrap answers in solution blocks and have a printanswers toggle**.
 
 ### 3. From a template
 
