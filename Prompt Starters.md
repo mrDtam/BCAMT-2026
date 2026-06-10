@@ -19,6 +19,6 @@
 > Here is a LaTeX snippet with errors. Identify the syntax or logic errors and output a corrected version. Explain the fixes briefly.
 
 ##Editing a LaTeX File
-Paste either the entire LaTeX code, or just the portion you want to edit.
+> Paste either the entire LaTeX code, or just the portion you want to edit.
 
-"Update the following code with ___(Insert your requests)___"
+> "Update the following code with ___(Insert your requests)___"
