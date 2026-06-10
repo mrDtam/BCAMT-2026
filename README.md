@@ -13,3 +13,4 @@ A collection of custom-made LaTeX workbooks, sample assessments, and review pack
 
 ---
 *Developed by Douglas Tam. These assets are shared for professional development and educational use. If you adapt these templates for your school, please preserve the original attribution headers.*
+[LinkedIn](www.linkedin.com/in/douglas-tam-791a1b240)
