@@ -7,6 +7,7 @@ A collection of custom-made LaTeX workbooks, sample assessments, and review pack
 ### 📥 Getting Started
 
 * **For Quick Access (All Audiences):** [**Click Here to Download everything as a ZIP file**](https://github.com/mr-tam-SGS/BCAMT-2026/archive/refs/heads/main.zip) 
+* **Prompt Starters:** To use your choice of AI, consider reading [Prompt Starters](Prompt Starters.md)
 * **For LaTeX Users:** Browse the `LaTeX Code` folder to grab specific `.tex` files or styles.
 * **For Previews:** Browse the `PDFS` folder to view the compiled, print-ready documents instantly.
 * **AI Integration:** Check out `Prompt Starters.md` for the exact AI workflows used to generate content for these templates.
