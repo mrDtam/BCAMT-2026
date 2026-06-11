@@ -1,5 +1,7 @@
 # BCAMT Workshop: LaTeX + AI
 
+Here are some different ways to use your choice of AI along with LaTeX to make professional assessments.
+
 ## Prompts
 
 ### 1. From scratch
@@ -8,9 +10,10 @@
 
 ### 2. From a PDF
 
-> Convert the PDF to LaTeX code, using the **exam class** and the **questions and parts environment**. Use **tikz** to reproduce any diagrams. **Wrap answers in solution blocks and have a printanswers toggle**.
+> Convert this PDF to LaTeX code, using the **exam class** and the **questions and parts environment**. Use **tikz** to reproduce any diagrams. **Wrap answers in solution blocks and have a printanswers toggle**.
+> **Free AI Tiers** Usually limit the conversation quite a bit once files are uploaded. It's recommended that you use LaTeX code as often as you can if not paying for premium AI services. If you hit a limit, you can paste just sections of your code to AI to edit.
 
-### 3. From a template
+### 3. From a LaTeX template
 
 > Make a new assessment following this template. Change the questions to __(Insert your requests)__.
 
