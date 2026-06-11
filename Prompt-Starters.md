@@ -11,7 +11,7 @@ Here are some different ways to use your choice of AI along with LaTeX to make p
 ### 2. From a PDF
 
 > Convert this PDF to LaTeX code, using the **exam class** and the **questions and parts environment**. Use **tikz** to reproduce any diagrams. **Wrap answers in solution blocks and have a printanswers toggle**.
-> **Free AI Tiers** Usually limit the conversation quite a bit once files are uploaded. It's recommended that you use LaTeX code as often as you can if not paying for premium AI services. If you hit a limit, you can paste just sections of your code to AI to edit.
+>> **Free AI Tiers** Usually limit the conversation quite a bit once files are uploaded. It's recommended that you use LaTeX code as often as you can if not paying for premium AI services. If you hit a limit, you can paste just sections of your code to AI to edit.
 
 ### 3. From a LaTeX template
 
