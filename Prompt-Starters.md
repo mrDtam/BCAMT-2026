@@ -1,6 +1,6 @@
 # BCAMT Workshop: LaTeX + AI
 
-Here are some different ways to use your choice of AI along with LaTeX to make professional assessments.
+Here are some different ways to use your choice of AI along with LaTeX to make professional assessments. If you plan on uploading an old file to convert, it is recommended that you first convert your file to PDF first.
 
 ## Prompts
 
