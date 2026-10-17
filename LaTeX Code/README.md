@@ -4,4 +4,4 @@
 
 #Non-Custom Style Guide
 
-**If you want to see what standard LaTeX looks like, without the custom commands, use the files inside the **Dry Code Files**
+** If you want to see what standard LaTeX looks like, without the custom commands, use the files inside the *Dry Code Files* **
