@@ -1,0 +1,89 @@
+\documentclass[12pt]{exam}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage{multicol}
+\usepackage{tasks}
+\usepackage{xcolor}
+\usepackage{makecell}
+
+\begin{document}
+
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering Pre-Calculus 11 - Reasoning and Analyzing Units 1+2 (V1)}}}
+\\
+\vspace{5mm}
+\makebox[0.75\textwidth]{Name :\enspace\hrulefill}
+
+\vspace{3mm}
+\makebox[0.75\textwidth]{Teacher's name:\enspace\hrulefill}
+\end{center}
+\begin{center}
+    \begin{tabular}{ |wc{5.5cm}||wc{0.7cm}|wc{0.7cm}|wc{0.7cm}|wc{0.7cm}|wc{0.7cm}|wc{0.7cm}|wc{0.7cm}|wc{0.7cm}|}
+    \hline
+    \centering \textbf{Outcome} & 0 & 1 & 2 & 3 & 4 & 5 & 6& 7\\ 
+    \hline
+    \centering Reasoning and Analyzing& & & & & & & & \\ 
+    \hline
+    \end{tabular}
+\end{center}
+
+%\printanswers
+\begin{questions}
+\question For each of the following statements, identify if the statement is always true, sometimes true, or never true. Provide a brief justification.
+\begin{parts}
+    
+
+\part Let $a,b,c$ be non-zero integers, then $ax^2+bx+c$ can be factored, if there are two integers $m,n$ such that $m\times n=ac$ and $m+n=b$.
+\begin{solution}
+    Always true. That's the correct determining factor.
+\end{solution}
+\vspace{\stretch{1}}
+\part Let $A,B$ be any real number, then $A+B\sqrt{3}$ is an irrational number.
+\begin{solution}
+    Sometimes true. If $B=0$ or $B=\sqrt{3}$, then we can have a rational number if $A$ is rational. If $B$ does not remove the irrational component of $\sqrt{3}$, then this statement is true.
+\end{solution}
+\vspace{\stretch{1}}
+\part If $A,B\geq 0$, then $A\sqrt{B}=\sqrt{A^2B}$.
+\begin{solution}
+    Always true. Method for entire radicals to mixed and vice versa.
+\end{solution}
+\vspace{\stretch{1}}
+\part If $x^2+bx+c$ can be factored, then $x^2+bx+c=0$ has two solutions for $x$.
+\begin{solution}
+    Sometimes true. It can be one solution but if someone argues the one solution is a \textit{double}, ie. two of the same answer, then allow it.
+\end{solution}
+\vspace{\stretch{1}}
+\part If $A>0$, then $\sqrt{A}>\sqrt[3]{A}$.
+\begin{solution}
+    Sometimes true. For $0<A<1$, the cubic root is larger.
+\end{solution}
+\vspace{\stretch{1}}
+\end{parts}
+\pagebreak
+
+\question A student was asked to solve the equation and leave answers in exact form. Which step did he first make an error? Explain the error.
+    \begin{flalign*}
+         && (2x+1)^2&=4x-8 &&\\   
+         && 4x^2+4x+1&=4x-8 &&{\textbf{Step 1}}\\
+         && 4x^2+9&=0 && \textnormal{\textbf{Step 2}}\\
+         && (2x+3)(2x-3)&=0 && \textnormal{\textbf{Step 3}}\\
+         && x&=\pm\frac{3}{2} && \textnormal{\textbf{Step 4}}
+    \end{flalign*}
+\vspace{30mm}
+    \question In each of the following, one item doesn't belong....
+        \begin{tasks}(4)
+            \task* Which expression doesn't belong? Explain.
+        
+                    \task[i. ] $\sqrt{8x}$ \task[ii. ] $\sqrt[3]{8x}$  \task[iii. ] $\sqrt{18x}$  \task[iv. ] $\sqrt{12x}$
+        
+            \vspace{45mm}
+            \task* Which equation doesn't belong? Explain.
+                \task*(2)[i. ] $x^2-13x+42=0$ \task*(2)[ii. ]$\sqrt{x-6}=x-6$ 
+                \task*(2)[iii. ] $x^2+7x+6=0$ \task*(2)[iv. ] $(7-x)(6-x)=0$ 
+            \vspace{40mm}
+        \end{tasks}
+\end{questions}
+\end{document}
