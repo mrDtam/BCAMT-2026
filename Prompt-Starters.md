@@ -17,6 +17,8 @@ You can copy and paste any of these phrases onto the end of the prompts above to
 * **To fix spacing for student work:** *"Add `\vspace{\stretch{1}}` after each question to give students room to work."*
 * **To add a header:** *"Include a header at the top with lines for Name, Date, and Period."*
 
+*  **Include a header at the top with lines for Name, Date, and Period. Assign point values to each question using \question[points]. Wrap all answers inside solution blocks and include a brief grading rubric inside each solution block. Add \vspace{\stretch{1}} after short questions and \vspace{\stretch{2}} after complex questions to distribute the workspace evenly across the page.**
+
 ### 2. From a PDF
 
 > Convert this PDF to LaTeX code, using the **exam class** and the **questions and parts environment**. Use **tikz** to reproduce any diagrams. **Wrap answers in solution blocks and have a \printanswers toggle** at the top of the document.
