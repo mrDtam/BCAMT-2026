@@ -8,7 +8,7 @@ Here are some different ways to use your choice of AI along with LaTeX to make p
 
 > Create a LaTeX math quiz using the **exam class**. Include 3 trigonometric identities questions inside the **questions environment**, and **wrap the answers in solution blocks**. Have a **\printanswers toggle** at the top of the document.
 >
-# Optional Prompt Add-Ons
+### Optional Prompt Add-Ons
 
 You can copy and paste any of these phrases onto the end of the prompts above to customize your assessment:
 
