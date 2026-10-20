@@ -12,12 +12,12 @@ Here are some different ways to use your choice of AI along with LaTeX to make p
 
 You can copy and paste any of these phrases onto the end of the prompts above to customize your assessment:
 
-* **To assign points:** *"Assign point values to each question using `\question[points]`."*
+* **To assign points:** *"Assign point values to each question using `\question[points]`." Provide total score display at the top of the document.*
 * **To add grading rubrics:** *"Include a brief grading rubric inside each solution block."*
 * **To fix spacing for student work:** *"Add `\vspace{\stretch{1}}` after each question to give students room to work."*
 * **To add a header:** *"Include a header at the top with lines for Name, Date, and Period."*
 
-*  **Include a header at the top with lines for Name, Date, and Period. Assign point values to each question using \question[points]. Wrap all answers inside solution blocks and include a brief grading rubric inside each solution block. Add \vspace{\stretch{1}} after short questions and \vspace{\stretch{2}} after complex questions to distribute the workspace evenly across the page.**
+*  **Include a header at the top with lines for Name, Date, and Period. Assign point values to each question using \question[points]. Provide total score display at the top of the document. Wrap all answers inside solution blocks and include a brief grading rubric inside each solution block. Add \vspace{\stretch{1}} after short questions and \vspace{\stretch{2}} after complex questions to distribute the workspace evenly across the page.**
 
 ### 2. From a PDF
 
