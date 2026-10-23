@@ -97,18 +97,204 @@
 }
 \newcommand{\drawaxis}[4]{%
     % Clip with a 0.8 buffer so labels and arrows are safe
-    \clip (#1-1.2, #3-1.2) rectangle (#2+1.2, #4+1.2);    
+    \clip (#1-0.8, #3-0.8) rectangle (#2+0.8, #4+0.8);
+    
     \draw[<->,thick] (#1,0) -- (#2,0) node[right] {$x$}; % x-axis
     \draw[<->,thick] (0,#3) -- (0,#4) node[above right] {$y$}; % y-axis
 }
 
 \newcommand{\drawgaxis}[4]{%
     % Clip with a 0.8 buffer
-    \clip (#1-1.2, #3-1.2) rectangle (#2+1.2, #4+1.2);
+    \clip (#1-0.8, #3-0.8) rectangle (#2+0.8, #4+0.8);
     
     \draw[<->,thick] (#1,0) -- (#2,0) node[right] {$x$}; % x-axis
     \draw[<->,thick] (0,#3) -- (0,#4) node[above right] {$y$}; % y-axis
     \draw[opacity=0.3] (#1,#3) grid (#2,#4);
+}
+\newcommand{\setupdivision}[2]{%
+  % #1 = Divisor (outside)
+  % #2 = Dividend (inside)
+  #1{\overline{\smash{\big)}\,#2\phantom{)}}}%
+}
+% 1. RECTANGULAR PRISM
+% Usage: \drawrectprism{length}{width}{height}{unit}
+\newcommand{\drawrectprism}[5]{
+    \begin{tikzpicture}[scale=#5]
+        \pgfmathsetmacro{\L}{#1}
+        \pgfmathsetmacro{\W}{#2}
+        \pgfmathsetmacro{\H}{#3}
+        % Auto-scale to fit max dimension into ~4cm
+        \pgfmathsetmacro{\maxdim}{max(\L, max(\W, \H))}
+        \pgfmathsetmacro{\sc}{4/\maxdim}
+        \begin{scope}[scale=\sc]
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (\L,0);
+            \coordinate (C) at (\L,\H);
+            \coordinate (D) at (0,\H);
+            \coordinate (E) at (\W/2,\W/2);
+            \coordinate (F) at (\L+\W/2,\W/2);
+            \coordinate (G) at (\L+\W/2,\H+\W/2);
+            \coordinate (H) at (\W/2,\H+\W/2);
+            
+            \draw (A)--(B)--(C)--(D)--(A);
+            \draw[dashed] (E) -- (F) -- (G) -- (H)--(E);
+            \draw (F) -- (G) --(H);
+            \draw (H)--(D); \draw (C) -- (G); \draw (B)--(F);
+            \draw[dashed] (A)--(E);
+            
+            % Labels
+            \draw (\L/2,0) node [below] {#1 #4};
+            \draw (\L+\W/2,\W/4) node[right] {#2 #4};
+            \draw (\L+\W/2,\H/2+\W/2) node[right] {#3 #4};
+        \end{scope}
+    \end{tikzpicture}
+}
+
+% 2. TRIANGULAR PRISM (Isosceles)
+% Usage: \drawtriprism{Base}{TriangleHeight}{PrismLength}{Unit}
+\newcommand{\drawtriprism}[4]{
+    \begin{tikzpicture}
+        \pgfmathsetmacro{\Tbase}{#1}
+        \pgfmathsetmacro{\Theight}{#2}
+        \pgfmathsetmacro{\Plength}{#3}
+        % Auto-scale
+        \pgfmathsetmacro{\maxdim}{max(\Tbase, max(\Theight, \Plength))}
+        \pgfmathsetmacro{\sc}{4/\maxdim}
+        
+        \begin{scope}[scale=\sc]
+            \coordinate (A) at (0,0); 
+            \coordinate (B) at (\Tbase,0);
+            \coordinate (C) at (\Tbase/2,\Theight);
+            \coordinate (E) at (\Tbase/2,\Plength/2); 
+            \coordinate (F) at (\Tbase/2+\Tbase,\Plength/2);
+            \coordinate (G) at (\Tbase/2+\Tbase/2,\Theight+\Plength/2);
+            
+            \draw (A)--(B)--(C)--(A); 
+            \draw[thin, dashed, opacity=0.2] (F) -- (E) -- (G) -- (E) -- (A);
+            \draw (F) -- (G); 
+            \draw (C) -- (G); \draw (B)--(F);
+            \draw[thin,dashed, opacity=0.2] (A)--(E);
+            
+            % Height indicator
+            \draw[red,dashed] (\Tbase/2,0) -- (C);
+            \draw (\Tbase/2,0) rectangle (\Tbase/2+0.4,0.4);
+            
+            % Labels
+            \draw (\Tbase/2,0) node [below] {#1 #4};
+            \draw (\Tbase/4+\Tbase,\Plength/4) node[below right] {#3 #4};
+            
+            % Arrow for height to avoid clutter
+            \coordinate (M) at (0,\Theight/1.5);
+            \draw [->,red] (M.north) node[above] {\footnotesize{#2 #4}} to [out=-60,in=300] (\Tbase/2,\Theight/2.2) ;
+        \end{scope}
+    \end{tikzpicture}
+}
+
+% 3. RIGHT TRIANGLE PRISM
+% Usage: \drawrighttriprism{BaseLeg}{HeightLeg}{PrismLength}{Unit}
+\newcommand{\drawrighttriprism}[4]{
+    \begin{tikzpicture}
+        \pgfmathsetmacro{\rTbase}{#1}
+        \pgfmathsetmacro{\rTheight}{#2}
+        \pgfmathsetmacro{\rPlength}{#3}
+        % Auto-scale
+        \pgfmathsetmacro{\maxdim}{max(\rTbase, max(\rTheight, \rPlength))}
+        \pgfmathsetmacro{\sc}{4/\maxdim}
+
+        \begin{scope}[scale=\sc]
+            \coordinate (A) at (0,0); 
+            \coordinate (B) at (\rTbase,0);
+            \coordinate (C) at (0,\rTheight);
+            \coordinate (E) at (\rTbase/2,\rPlength/2); 
+            \coordinate (F) at (\rTbase/2+\rTbase,\rPlength/2);
+            \coordinate (G) at (\rTbase/2,\rTheight+\rPlength/2); 
+            
+            \draw (A)--(B)--(C)--(A);
+            \draw[thin, dashed, opacity=0.2] (F) -- (E) -- (G) -- (E) -- (A); 
+            \draw (F) -- (G);
+            \draw (C) -- (G); \draw (B)--(F); 
+            \draw[thin,dashed, opacity=0.2] (A)--(E); 
+            \draw (0,0) rectangle (0.4,0.4);
+            
+            % Labels
+            \draw (\rTbase/2,0) node [below] {#1 #4};
+            \draw (0,\rTheight/2.2) node[left] {#2 #4};
+            \draw (\rTbase/4+\rTbase,\rPlength/4) node[below right] {#3 #4};
+        \end{scope}
+    \end{tikzpicture}
+}
+
+% 4. CYLINDER (Vertical)
+% Usage: \drawcylinder{Radius}{Height}{Unit}
+\newcommand{\drawcylinder}[3]{
+    \begin{tikzpicture}
+        \pgfmathsetmacro{\cR}{#1}
+        \pgfmathsetmacro{\cH}{#2}
+        % Auto-scale based on Height or Diameter
+        \pgfmathsetmacro{\maxdim}{max(\cH, \cR+\cR)}
+        \pgfmathsetmacro{\sc}{4/\maxdim}
+        
+        \begin{scope}[scale=\sc]
+            % Changed fixed "1cm" ellipse to proportional 0.3*Radius
+            \draw (-\cR,\cH) arc(-180:180:\cR cm and 0.3*\cR cm);
+            \draw (-\cR,0) arc(-180:0:\cR cm and 0.3*\cR cm);
+            \draw[dashed, opacity=0.5] (-\cR,0) arc(180:0:\cR cm and 0.3*\cR cm);
+            \draw (-\cR,0) -- (-\cR,\cH);
+            \draw (\cR,0) -- (\cR,\cH);
+            
+            % Labels
+            \draw (\cR,\cH/2) node[right] {#2 #3};
+            \draw (\cR/2,\cH) node[above] {#1 #3}; 
+            \draw[dashed] (0,\cH) -- (\cR,\cH); 
+            \filldraw (0,\cH) circle (2pt);
+        \end{scope}
+    \end{tikzpicture}
+}
+
+% 5. CONE
+% Usage: \drawcone{Radius}{Height}{Unit}
+\newcommand{\drawcone}[3]{
+    \begin{tikzpicture}
+        \pgfmathsetmacro{\cR}{#1}
+        \pgfmathsetmacro{\cH}{#2}
+        \pgfmathsetmacro{\maxdim}{max(\cH, \cR+\cR)}
+        \pgfmathsetmacro{\sc}{4/\maxdim}
+        
+        \begin{scope}[scale=\sc]
+            \draw (-\cR,0) arc(-180:0:\cR cm and 0.3*\cR cm);
+            \draw[dashed, opacity=0.5] (-\cR,0) arc(180:0:\cR cm and 0.3*\cR cm);
+            \draw (-\cR,0) -- (0,\cH); 
+            \draw (\cR,0)--(0,\cH);
+            
+            % Labels
+            \draw (0,\cH/2.2) node[right] {#2 #3};
+            \draw (\cR/2,0) node[below] {#1 #3}; 
+            \draw[dashed,opacity=0.5] (0,0) -- (\cR,0);
+            \draw (0,0) rectangle (0.3,0.3);
+            \draw[dashed,opacity=0.5] (0,0)--(0,\cH);
+        \end{scope}
+    \end{tikzpicture}
+}
+
+% 6. SPHERE
+% Usage: \drawsphere{Radius}{Unit}
+\newcommand{\drawsphere}[2]{
+    \begin{tikzpicture}
+        \pgfmathsetmacro{\cR}{#1}
+        \pgfmathsetmacro{\sc}{4/(\cR*2)} % Scale to diameter
+        
+        \begin{scope}[scale=\sc]
+            \draw (-\cR,0) arc(-180:0:\cR cm and 0.3*\cR cm);
+            \draw[dashed, opacity=0.2] (-\cR,0) arc(180:0:\cR cm and 0.3*\cR cm);
+            \draw (0,0) circle (\cR cm);
+            \draw[dashed, opacity=0.6] (-\cR,0) -- (\cR,0);
+            
+            % Calc Diameter for label
+            \pgfmathparse{int(#1*2)}
+            \let\cD\pgfmathresult
+            \draw (0,0) node[above] {\cD #2};
+        \end{scope}
+    \end{tikzpicture}
 }
 \newcommand{\proftestpage}[1][]{
 \begin{center}
@@ -170,7 +356,7 @@ Examples of cheating include:
     \hline
     \multicolumn{9}{|c|}{Rubric} \\ 
     \hline
-    \centering \textbf{Outcome} & 0 & 1 & 2 & 3 & 4 & 5 - & 5 +& 6\\ 
+    \centering \textbf{Outcome} & 0 & 1 & 2 & 3 & 4 & 5 -& 5 +& 6\\ 
     \hline
     \centering Understanding and Solving& & & & & & & & \\ 
     \hline
@@ -206,6 +392,7 @@ Examples of cheating include:
     \makebox[0.75\textwidth]{Teacher’s name:\enspace\hrulefill}
 }
 
+
 \newcommand{\quizfrontpage}[1][]{
 \begin{center}
 \fbox{\fbox{\parbox{5.5in}{\centering #1} }}
@@ -217,4 +404,3 @@ Examples of cheating include:
 \makebox[0.75\textwidth]{Teacher’s name:\enspace\hrulefill}
 \end{center}
 }
-
