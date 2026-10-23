@@ -10,7 +10,6 @@ A collection of custom-made LaTeX workbooks, sample assessments, and review pack
 * **Prompt Starters:** To use your choice of AI, [**View the AI Prompt Starters**](Prompt-Starters.md)
 * **For LaTeX Users:** Browse the `LaTeX Code` folder to grab specific `.tex` files or styles.
 * **For Previews:** Browse the `PDFS` folder to view the compiled, print-ready documents instantly.
-* **AI Integration:** Check out `Prompt Starters.md` for the exact AI workflows used to generate content for these templates.
 ---
 ### 🏛️ The Framework Behind the Files: Modern Traditionalism
 While these files can be used as standalone LaTeX templates, many of the structures, formatting choices, and assessment designs you see here are built upon **Modern Traditionalism**. 
