@@ -170,7 +170,7 @@ Examples of cheating include:
     \hline
     \multicolumn{9}{|c|}{Rubric} \\ 
     \hline
-    \centering \textbf{Outcome} & 0 & 1 & 2 & 3 & 4 & 5 & 6& 7\\ 
+    \centering \textbf{Outcome} & 0 & 1 & 2 & 3 & 4 & 5 - & 5 +& 6\\ 
     \hline
     \centering Understanding and Solving& & & & & & & & \\ 
     \hline
@@ -275,5 +275,33 @@ Examples of cheating include:
 
 \vspace{3mm}
 \makebox[0.75\textwidth]{Teacher:\enspace\hrulefill}
+\end{center}
+}
+
+\newcommand{\assignmentfrontpageNB}[1][]{
+\begin{center}
+\fbox{\fbox{\parbox{6.2in}{\centering #1} }}
+\\
+\vspace{5mm}
+
+\begin{tabular}{wl{7.7cm}||wl{7.7cm}}
+     Student: &  Teacher: \\
+\end{tabular}
+
+\vspace{5mm}
+
+\begin{tabular}{ |wc{5.5cm}||wc{0.5cm}|wc{0.5cm}|wc{0.5cm}|wc{0.5cm}|wc{0.5cm}|wc{0.5cm}|wc{0.5cm}|wc{0.5cm}|wc{2.5cm}|}
+\hline
+\multicolumn{10}{|c|}{Rubric} \\ 
+\hline
+\centering \textbf{Outcome} & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7& Feedback \\ 
+\hline
+\centering Reasoning and Analyzing& & & & & & & & & \\ 
+\hline
+\centering Understanding and Solving& & & & & & & & & \\ 
+\hline
+\centering Mathematical Communication& & & & & & & & &\\ 
+\hline
+\end{tabular}
 \end{center}
 }
