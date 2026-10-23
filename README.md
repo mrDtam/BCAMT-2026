@@ -4,15 +4,6 @@ A collection of custom-made LaTeX workbooks, sample assessments, and review pack
 
 ---
 
-### 🏛️ The Framework Behind the Files: Modern Traditionalism
-While these files can be used as standalone LaTeX templates, many of the structures, formatting choices, and assessment designs you see here are built upon **Modern Traditionalism**. 
-
-Modern Traditionalism is a full-scale, adaptable math education framework currently used by many teachers in our department. It keeps the non-negotiable elements of traditional math instruction (procedural fluency, high expectations, and structure) while adding the safety net and diagnostic power of modern assessment (level-based grading, multiple pathways, and AI-assisted workflows). 
-
-*If you are curious about how the assessment structures fit together, feel free to ask!*
-
----
-
 ### 📥 Getting Started
 
 * **For Quick Access (All Audiences):** [**Click Here to Download everything as a ZIP file**](https://github.com/mr-tam-SGS/BCAMT-2026/archive/refs/heads/main.zip) 
@@ -20,6 +11,11 @@ Modern Traditionalism is a full-scale, adaptable math education framework curren
 * **For LaTeX Users:** Browse the `LaTeX Code` folder to grab specific `.tex` files or styles.
 * **For Previews:** Browse the `PDFS` folder to view the compiled, print-ready documents instantly.
 * **AI Integration:** Check out `Prompt Starters.md` for the exact AI workflows used to generate content for these templates.
+---
+### 🏛️ The Framework Behind the Files: Modern Traditionalism
+While these files can be used as standalone LaTeX templates, many of the structures, formatting choices, and assessment designs you see here are built upon **Modern Traditionalism**. 
+
+Modern Traditionalism is a full-scale, adaptable math education framework currently used by many teachers in our department. It keeps the non-negotiable elements of traditional math instruction (procedural fluency, high expectations, and structure) while adding the safety net and diagnostic power of modern assessment (level-based grading, multiple pathways, and AI-assisted workflows). 
 
 ---
 *Developed by Douglas Tam. These assets are shared for professional development and educational use. If you find them useful, please maintain this notice and link back to the original repository when sharing or adapting.*
