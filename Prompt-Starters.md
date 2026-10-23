@@ -39,4 +39,4 @@ You can copy and paste any of these phrases onto the end of the prompts above to
 
 ## Making new versions
 > "Make a new version of this assessment, change the numbers and expressions, but keep the difficulty the same. **Wrap answers in solution blocks and have a printanswers toggle**.
->> **Paste your LaTeX code for the assessment**
+>> **(Paste your LaTeX code for the assessment)**
